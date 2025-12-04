@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "The Hunter: Crypto Sniffer",
+  "version": "1.0",
+  "description": "Auto-detect suspicious URL parameters and trace their JS source.",
+  "permissions": [
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["hunter.js"],
+      "run_at": "document_start",
+      "world": "MAIN" 
+    }
+  ]
+}
